@@ -32,12 +32,12 @@ public class GeoHashTest {
 
     @Test
     public void testMoveRight() {
-        assertEquals("wsqqx", GeoHash.right("wsqqq"));
+        assertEquals("wsqqr", GeoHash.right("wsqqq"));
     }
 
     @Test
     public void testMoveLeft() {
-        assertEquals("wsqqw", GeoHash.left("wsqqq"));
+        assertEquals("wsqqm", GeoHash.left("wsqqq"));
     }
 
     @Test
@@ -47,7 +47,7 @@ public class GeoHashTest {
 
     @Test
     public void testMoveBottom() {
-        assertEquals("wsqqp", GeoHash.bottom("wsqqq"));
+        assertEquals("wsqqn", GeoHash.bottom("wsqqq"));
     }
 
     @Test
@@ -59,7 +59,7 @@ public class GeoHashTest {
 
     @Test
     public void testGridAsStringOutput() {
-        String grid = GeoHash.gridAsString("wsqqq", 1, java.util.Collections.EMPTY_SET);
+        String grid = GeoHash.gridAsString("wsqqq", 1, java.util.Collections.<String>emptySet());
         assertNotNull(grid);
         assertTrue(grid.contains("wsqqq"));
     }
